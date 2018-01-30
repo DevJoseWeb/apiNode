@@ -51,6 +51,10 @@ bcryptjs:
   version "2.4.3"
   resolved "https://registry.yarnpkg.com/bcryptjs/-/bcryptjs-2.4.3.tgz#9ab5627b93e60621ff7cdac5da9733027df1d0cb"
 
+bluebird@3.0.5:
+  version "3.0.5"
+  resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.0.5.tgz#2ff9d07c9b3edb29d6d280fe07528365e7ecd392"
+
 bluebird@^3.5.0:
   version "3.5.1"
   resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.5.1.tgz#d9551f9de98f1fcda1e683d17ee91a0602ee2eb9"
@@ -135,6 +139,10 @@ cookie@0.3.1:
 core-util-is@~1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/core-util-is/-/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
+
+cors@2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/cors/-/cors-2.0.0.tgz#426a7060f35347ae3235b594a42bc09d0f766d54"
 
 debug@2.6.9, debug@^2.6.9:
   version "2.6.9"
@@ -469,6 +477,12 @@ mongodb@2.2.33:
     es6-promise "3.2.1"
     mongodb-core "2.1.17"
     readable-stream "2.2.7"
+
+mongoose-paginate@^5.0.3:
+  version "5.0.3"
+  resolved "https://registry.yarnpkg.com/mongoose-paginate/-/mongoose-paginate-5.0.3.tgz#d7ae49ed5bf64f1f7af7620ea865b67058c55371"
+  dependencies:
+    bluebird "3.0.5"
 
 mongoose@^4.13.4:
   version "4.13.4"
