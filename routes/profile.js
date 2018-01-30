@@ -4,14 +4,14 @@ var multer = require('multer');
 
 var storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        cb(null, 'uploads/')
+        cb(null, '../mp3/')
     },
     filename: function (req, file, cb) {
-        cb(null, file.fieldname + '-' + Date.now() + '.ogg')
+        cb(null, file.fieldname + '-' + Date.now() + '.mp3')
     }
 });
 
-var upload = multer({ storage: storage }).single('musica');
+var upload = multer({ storage: storage }).single('Musica');
 
 
 router.post('/', function (req, res) {
