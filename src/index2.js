@@ -17,7 +17,7 @@ app.use(function (req, res, next) {
  // res.setHeader('Access-Control-Allow-Credentials', true);
   next();
 });
- 
+ //teste
 app.use(multer({dest: './uploads',
   rename: function (fieldname, filename) {
     return filename + Date.now();
