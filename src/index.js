@@ -12,44 +12,6 @@ const getStat = require('util').promisify(fs.stat);
 const highWaterMark =  2;
 const app = express();
 
-const DIR = './uploads/';
-const upload = multer({dest: DIR});
-/*
-app.use(function (req, res, next) {
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Methods', 'POST');
-  res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
-  //res.setHeader('Access-Control-Allow-Credentials', true);
-  next();
-});app.get('/api', function (req, res) {
-  res.end('file catcher example');
-});
- 
-app.post('/api', function (req, res) {
-  upload(req, res, function (err) {
-    if (err) {
-      return res.end(err.toString());
-    }
- 
-    res.end('File is uploaded');
-  });
-});
-
-app.use(multer({
-  dest: DIR,
-  rename: function (fieldname, filename) {
-    return filename + Date.now();
-  },
-  onFileUploadStart: function (file) {
-    console.log(file.originalname + ' is starting ...');
-  },
-  onFileUploadComplete: function (file) {
-    console.log(file.fieldname + ' uploaded to  ' + file.path);
-  }
-}));
-
-*/
-
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
@@ -57,14 +19,14 @@ require('./app/controllers/index')(app);
 
 app.get('/audio', async (req, res) => {
 
-    const filePath = './audio.ogg';
-    
+    const filePath = '../mp3/Musica-1517306300713.mp3';
+	
     const stat = await getStat(filePath);
     console.log(stat);    
     
     // informações sobre o tipo do conteúdo e o tamanho do arquivo
     res.writeHead(200, {
-        'Content-Type': 'audio/ogg',
+        'Content-Type': 'audio/mp3',
         'Content-Length': stat.size
     });
 
